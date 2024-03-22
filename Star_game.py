@@ -2,6 +2,7 @@ import pygame as py
 import random
 import time
 
+
 py.init()
 
 WIDTH, HEIGHT = 800, 700

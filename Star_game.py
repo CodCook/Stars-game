@@ -7,7 +7,7 @@ py.init()
 
 WIDTH, HEIGHT = 800, 700
 WIN = py.display.set_mode((WIDTH, HEIGHT))
-py.display.set_caption("Space Dodge")
+py.display.set_caption("Stars Game")
 
 background = py.transform.scale(py.image.load("pictures/game.jpg"), (WIDTH, HEIGHT))
 player_pic = py.transform.scale(py.image.load("pictures/player.png"), (50, 50))

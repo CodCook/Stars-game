@@ -9,7 +9,7 @@ WIN = py.display.set_mode((WIDTH, HEIGHT))
 py.display.set_caption("Stars Game")
 
 background = py.transform.scale(py.image.load("pictures/game.jpg"), (WIDTH, HEIGHT))
-player_pic = py.transform.scale(py.image.load("pictures/player.png"), (50, 50))
+player_pic = py.transform.scale(py.image.load("pictures/player.webp"), (50, 50))
 star_enemy = py.transform.scale(py.image.load("pictures/dimond.webp"), (50, 50))
 dimonds_pic = py.transform.scale(py.image.load("pictures/enemy.png"), (50, 50))
 start_screen_img = py.transform.scale(py.image.load("pictures/startBG.jpg"), (WIDTH, HEIGHT))
@@ -75,7 +75,9 @@ def game_over(elapsed_time):
 
 def start_screen():
     WIN.blit(start_screen_img, (0, 0))
-    start_text = py.font.SysFont("comicsans", 50).render("Press S to start the Game", 1, (255, 0, 0))
+    start_text = py.font.SysFont("comicsans", 50).render("Press S to start the Game", 1, (255, 255, 255))
+    info_text = py.font.SysFont("comicsans", 20).render("Game made by Mahgoub Mohamed (pq00p)", 1, (255, 255, 255))
+    WIN.blit(info_text, (WIDTH - info_text.get_width()//2-600, HEIGHT//2 - info_text.get_height()//2 + 300))
     WIN.blit(start_text, (WIDTH//2 - start_text.get_width()//2, HEIGHT//2 - start_text.get_height()//2))
     py.display.update()
     waiting = True

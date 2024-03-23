@@ -146,6 +146,7 @@ def main():
 
             draw(player, elapsed_time, skulls, dimonds)
             if random.randint(1, 100) <= 2:
+                
                 if elapsed_time > 30:
                     health_decrement = 15
                     spawn_star(2)
